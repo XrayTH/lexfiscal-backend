@@ -1,7 +1,7 @@
 import rateLimit from "express-rate-limit"
 
 const rateLimiter=rateLimit({
-  windowMs:process.env.RATE_LIMIT_WINDOW*60*1000,
+  windowMs:Number(process.env.RATE_LIMIT_WINDOW)||15*60*1000,
   max:process.env.RATE_LIMIT_MAX,
   standardHeaders:true,
   legacyHeaders:false
