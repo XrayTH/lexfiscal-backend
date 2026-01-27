@@ -14,3 +14,22 @@ export const getTributes=async(req,res,next)=>{
     next(error)
   }
 }
+
+export const getTributeBySlug=async(req,res,next)=>{
+  try{
+    const {slug}=req.params
+
+    const tribute=await Tribute.findOne({slug})
+
+    if(!tribute){
+      return res.status(404).json({
+        message:"Tribute not found"
+      })
+    }
+
+    res.status(200).json(tribute)
+  }catch(error){
+    next(error)
+  }
+}
+
