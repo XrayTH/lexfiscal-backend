@@ -95,6 +95,32 @@ GET /api/v1/tributes/:slug
 
 **Respuesta:** Objeto completo del tributo con toda su información.
 
+### Marco Legal y Fuentes Legales
+```
+GET /api/v1/framework
+```
+Obtiene información sobre el marco legal tributario colombiano y sus fuentes primarias.
+
+**Respuesta:**
+```json
+{
+  "country": "Colombia",
+  "legalSystem": "Sistema tributario colombiano",
+  "primarySources": [
+    "Constitución Política de Colombia",
+    "Estatuto Tributario",
+    "Leyes tributarias",
+    "Decretos reglamentarios"
+  ],
+  "authority": [
+    "DIAN",
+    "Entidades territoriales"
+  ],
+  "scope": "Informativo",
+  "disclaimer": "La información presentada es de carácter informativo y no constituye asesoría legal"
+}
+```
+
 ## 🏗️ Estructura del Proyecto
 
 | Carpeta | Descripción |
