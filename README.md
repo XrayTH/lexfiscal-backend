@@ -26,6 +26,7 @@ MONGO_URI=mongodb://localhost:27017/lexfiscal
 RATE_LIMIT_ENABLED=true
 RATE_LIMIT_WINDOW=900000
 RATE_LIMIT_MAX=100
+FRONTEND_URL=https://domain.com
 ```
 
 ### Ejecutar el Proyecto
