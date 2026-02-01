@@ -2,7 +2,6 @@ import Tribute from "../models/Tribute.js"
 
 export const getTributes = async (req, res, next) => {
   try {
-    // preferimos los valores validados (si existen), si no usamos req.query directo
     const qObj = (req.validated && req.validated.query) || req.query || {}
     const page = parseInt(qObj.page, 10) || 1
     const limit = Math.min(parseInt(qObj.limit, 10) || 20, 100)

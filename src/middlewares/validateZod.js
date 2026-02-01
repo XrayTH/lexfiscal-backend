@@ -22,7 +22,6 @@ export const validateParams = (schema) => (req, res, next) => {
 
 export const validateQuery = (schema) => (req, res, next) => {
   try {
-    // parse desde req.query (strings) y guardamos resultado en req.validated.query
     const parsed = schema.parse(req.query)
     req.validated = { ...(req.validated || {}), query: parsed }
     next()
