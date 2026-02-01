@@ -12,7 +12,6 @@ const app=express()
 dotenv.config()
 
 app.use(helmet())
-app.use(errorHandler)
 app.use(express.json())
 app.use(cors({
  origin:process.env.FRONTEND_URL,
@@ -26,5 +25,7 @@ if(process.env.RATE_LIMIT_ENABLED==="true"){
 app.use("/api/v1",healthRoutes)
 app.use("/api/v1",tributeRoutes)
 app.use("/api/v1",getFramework)
+
+app.use(errorHandler)
 
 export default app
